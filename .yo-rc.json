@@ -1,0 +1,9 @@
+{
+  "generator-donejs": {
+    "promptValues": {
+      "authorName": "Kevin Phillips",
+      "authorEmail": "kphillips86@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}

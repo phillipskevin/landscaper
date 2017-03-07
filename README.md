@@ -2,6 +2,8 @@
 
 Welcome to the landscaper DoneJS application!
 
+[![Build Status](https://travis-ci.org/phillipskevin/landscaper.svg?branch=master)](https://travis-ci.org/phillipskevin/landscaper)
+
 ## Getting started
 
 To install all dependencies, (e.g. after cloning it from a Git repository) run

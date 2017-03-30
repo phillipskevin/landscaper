@@ -5,8 +5,34 @@
   <body>
     <can-import from="landscaper/styles.less" />
     <can-import from="landscaper/app" export-as="viewModel" />
+    <can-import from="landscaper/loading.component" />
 
-    <h1>{{message}}</h1>
+    {{#switch page}}
+      {{#case "login"}}
+        <can-import from="landscaper/login/" can-tag="ls-loading">
+          <ls-login {(Session)}="Session" />
+        </can-import>
+      {{/case}}
+
+      {{#case "auth"}}
+        <can-import from="landscaper/auth/" can-tag="ls-loading">
+          <ls-auth {(code)}="code" />
+        </can-import>
+      {{/case}}
+
+      {{#case "jobs"}}
+        <can-import from="landscaper/jobs/" can-tag="ls-loading">
+          <ls-jobs />
+        </can-import>
+      {{/case}}
+
+      {{! default to jobs page }}
+      {{#default}}
+        <can-import from="landscaper/jobs/" can-tag="ls-loading">
+          <ls-jobs />
+        </can-import>
+      {{/default}}
+    {{/switch}}
 
     {{#switch env.NODE_ENV}}
       {{#case "production"}}

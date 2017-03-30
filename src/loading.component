@@ -1,0 +1,9 @@
+<can-component tag="ls-loading" leak-scope>
+  <view>
+    {{#if isResolved}}
+      <content />
+    {{else}}
+      Loading...
+    {{/if}}
+  </view>
+</can-component>

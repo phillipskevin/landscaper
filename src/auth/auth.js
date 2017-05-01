@@ -12,8 +12,10 @@ export default Component.extend({
   view,
   events: {
     inserted() {
-      window.opener.authAgent.emit('login', this.viewModel.code);
-      window.close();
+      setTimeout(() => {
+        window.opener.authAgent.emit('login', this.viewModel.code);
+        window.close();
+      }, 200);
     }
   }
 });
